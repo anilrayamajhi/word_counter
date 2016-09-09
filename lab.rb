@@ -1,6 +1,14 @@
 my_file = File.open('lab_frequencies.txt', 'r')
 final_file = my_file.read
 
+
+final_file.gsub!(/[.]/, "")
+final_file.gsub!(/[!]/, "")
+final_file.gsub!(/[,]/, "")
+final_file.gsub!(/["]/, "")
+final_file.gsub!(/['~]/, "")
+final_file.gsub!(/[?]/, "")
+
 words = final_file.split(" ")
 # p words
 
